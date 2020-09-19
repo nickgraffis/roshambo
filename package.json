@@ -1,0 +1,22 @@
+{
+  "name": "@nickgraffis/roshambo",
+  "version": "1.0.0",
+  "description": "Rock 🗿, Paper 📄, Scissors ✂!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rock",
+    "paper",
+    "scissors",
+    "games",
+    "roshambo"
+  ],
+  "author": "Nick Graffis",
+  "license": "MIT",
+  "bin": {
+    "roshambo": "./bin/index.js"
+  },
+  "dependencies": {}
+}
