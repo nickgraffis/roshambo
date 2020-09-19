@@ -1,8 +1,10 @@
 # Roshambo
 Rock 🗿, Paper 📄, Scissors ✂!
 
-```~> npm install -g @nickgraffis/roshambo```
-```~> roshambo```
+```
+~> npm install -g @nickgraffis/roshambo
+~> roshambo
+```
 # Game Play
 You can play Rock, Paper, Scissors!
 
