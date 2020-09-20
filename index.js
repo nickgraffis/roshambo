@@ -50,7 +50,8 @@ var recursiveAsyncReadLine = function () {
           readline.close();
           process.exit();
       } else if (acceptableResponses.includes(userHand)){
-        console.log(emojify(computerHand.toLowerCase()));
+        computerHand = emojify(computerHand.toLowerCase());
+        console.log(computerHand[0].toUpperCase() + computerHand.substring(1));
         var outcome = rockPaperScissors(userHand.toLowerCase(), computerHand.toLowerCase());
         if (outcome == 0) {
           userScore++;
