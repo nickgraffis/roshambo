@@ -1,5 +1,8 @@
 # Roshambo
 Rock 🗿, Paper 📄, Scissors ✂!
+# Demo
+
+<img src="/image/demo.gif">
 
 ```
 ~> npm install -g @nickgraffis/roshambo
