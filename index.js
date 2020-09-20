@@ -29,12 +29,13 @@ function randomInt(max) {
 
 /* Make it fun! */
 function emojify(computerHand) {
+  var response = computerHand[0].toUpperCase() + computerHand.substring(1);
   if (computerHand === 'rock') {
-    return computerHand + ' 🗿!';
+    return response + ' 🗿!';
   } else if (computerHand === 'paper') {
-    return computerHand + ' 📄!';
+    return response + ' 📄!';
   } else {
-    return computerHand + ' ✂!';
+    return response + ' ✂!';
   }
 }
 
@@ -69,8 +70,7 @@ var recursiveAsyncReadLine = function () {
           readline.close();
           process.exit();
       } else if (acceptableResponses.includes(userHand)){
-        computerHand = emojify(computerHand.toLowerCase());
-        console.log(computerHand[0].toUpperCase() + computerHand.substring(1));
+        console.log(emojify(computerHand.toLowerCase()));
         var outcome = rockPaperScissors(userHand.toLowerCase(), computerHand.toLowerCase());
         if (outcome == 0) {
           userScore++;
