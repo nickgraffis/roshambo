@@ -1,8 +1,14 @@
+/* Pull in readline */
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
+/*
+* Determine the victor
+* string playerA
+* string playerB
+*/
 function rockPaperScissors (playerA, playerB) {
   var options = ['rock', 'paper', 'scissors'];
   var a = options.indexOf(playerA);
@@ -16,10 +22,12 @@ function rockPaperScissors (playerA, playerB) {
   }
 }
 
+/* Get random integer up to max */
 function randomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+/* Make it fun! */
 function emojify(computerHand) {
   if (computerHand === 'rock') {
     return computerHand + ' 🗿!';
@@ -30,8 +38,19 @@ function emojify(computerHand) {
   }
 }
 
-var userScore = 0;
-var computerScore = 0;
+var userScore = 0; //Initialize User's Score
+var computerScore = 0; //Initialize Computer's userScore
+
+/*
+* Set up the readline prompt that will:
+* Determine if the game is over or not
+* Prompt the user with a question and a > prompt
+* Determine if an acceptable response was given by the user
+* Randomly select a computer response
+* Use rockPaperScissors() to determine the winner
+* Keep score
+* Begin the function again
+*/
 var recursiveAsyncReadLine = function () {
   if (userScore > 2 || computerScore > 2) {
     if(userScore > computerScore) {
@@ -68,4 +87,4 @@ var recursiveAsyncReadLine = function () {
       recursiveAsyncReadLine();
   });
 }
-recursiveAsyncReadLine();
+recursiveAsyncReadLine(); //Begin readline function
